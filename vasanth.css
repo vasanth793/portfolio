@@ -1,4 +1,39 @@
-.div1{
-    text-align: center;
+body{
+    margin: 0;
+}
+.body{
+    background: linear-gradient(to top, #000000, #726e6b);
+    position: relative;
     
 }
+.div1{
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; 
+}
+.imgg{
+    right: 16px;
+    position: absolute;
+
+}
+.dis{
+    padding-left: 100px;
+    padding-top: 50px;
+    color: white;
+    color: white;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.cont{
+    display: flex;
+    color: white;
+    padding-top: 200px;
+}
+.img{
+    padding-right: 50px;
+}
+
+
+
