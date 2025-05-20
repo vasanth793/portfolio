@@ -1,177 +1,253 @@
-body {
-    font-family: 'Dorsa', sans-serif;
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
     overflow-x: hidden;
-    
+    line-height: 1.6;
 }
 
-header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    top: 0;
-    text-decoration: none;
-    text-decoration-line: none;
-
-}
-
-.logo {
-    font-size: 2rem;
-    text-decoration: none;
-}
-.logo a{
-    text-decoration: none;
-    color: #00f2ff;
-     word-spacing: 5PX;
-}
-
-.navbar{
-    flex-wrap: wrap;
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #111;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00bcd4;
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00f2ff;
+    color: #00bcd4;
 }
 
-.socials img {
+.socials a img {
     width: 30px;
     margin-left: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.socials img:hover {
+.socials a img:hover {
     transform: scale(1.2);
 }
 
-
+/* Hero Section */
 .hero {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 30px 20px 20px;
+    color: white;
     background: url('img/3d-bg.jpg') no-repeat center center/cover;
-    
+    animation: fadeIn 1s ease-in;
 }
 
-
-.hero-text,
-.hero-image {
-    flex: 1 1 ;
-
-}
-.hero-image {
-    padding-left: 50px;
-   
+.hero-text {
+    flex: 1;
+    padding-right: 1rem;
 }
 
 .hero-text h1 {
     font-size: 3rem;
-    animation: fadeInUp 1s ease-out;
+    color: #00796b;
 }
 
 .hero-text h2 {
     font-size: 2rem;
-    color: #00f2ff;
-    animation: fadeInUp 1.2s ease-out;
+    color: #0097a7;
+    margin-bottom: 1rem;
 }
 
 .hero-text p {
-    font-size: 1.1rem;
-    animation: fadeInUp 1.4s ease-out;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .hero-image img {
-    border-radius: 15px;
     max-width: 100%;
-    animation: fadeIn 2s ease-in-out;
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+   animation: fadeIn 1s ease-in;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-section {
-    padding: 20px 20px;
-}
-
-.about-content,
-.project-list,
-.skills-list {
+.about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.about-img,
-.project-card img {
-    border-radius: 10px;
-    max-width: 100%;
+.about-img {
+    width: 300px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
-.about-text,
-.project-card,
-.skill-card {
-    flex: 1 1 300px;
-}
-
-.project-card,
-.skill-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover,
-.skill-card:hover {
+.about-img:hover{
     transform: scale(1.05);
 }
 
-.contact a {
-    color: #00f2ff;
+.about-text {
+    max-width: 600px;
+    text-align: left;
 }
 
-footer {
+.highlights li {
+    margin-top: 0.5rem;
+}
+
+/* Projects Section */
+.projects {
+   
+    padding: 4rem 2rem;
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Skills Section */
+.skills {
+    
+    padding: 4rem 2rem;
+    text-align: center;
+
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.skill-card:hover{
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact a {
+    color: #80deea;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero, .about-content, .skills-list, .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text, .hero-image {
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-img {
+        width: 90%;
+    }
 }
