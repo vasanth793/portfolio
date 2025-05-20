@@ -1,24 +1,37 @@
-* {
+body {
+    font-family: 'Dorsa', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
     
 }
 
-body {
-    background-color: #f7f7f7;
-    color: #333;
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    top: 0;
+    text-decoration: none;
+    text-decoration-line: none;
+
 }
 
-.navbar {
+.logo {
+    font-size: 2rem;
+    text-decoration: none;
+}
+.logo a{
+    text-decoration: none;
+    color: #00f2ff;
+     word-spacing: 5PX;
+}
+
+.navbar{
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #222;
-    color: white;
 }
 
 .nav-links {
@@ -27,92 +40,138 @@ body {
     gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
-.socials a img {
+.nav-links a:hover {
+    color: #00f2ff;
+}
+
+.socials img {
     width: 30px;
     margin-left: 10px;
+    transition: transform 0.3s;
 }
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
 
 .hero {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 60px 20px;
-    background-color: #fff;
+    padding: 30px 20px 20px;
+    background: url('img/3d-bg.jpg') no-repeat center center/cover;
+    
 }
 
-.hero-text {
-    max-width: 600px;
+
+.hero-text,
+.hero-image {
+    flex: 1 1 ;
+
+}
+.hero-image {
+    padding-left: 50px;
+   
 }
 
 .hero-text h1 {
-    font-size: 3em;
-    color: #444;
+    font-size: 3rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-text h2 {
-    font-size: 2em;
-    margin-top: 10px;
-    color: #666;
+    font-size: 2rem;
+    color: #00f2ff;
+    animation: fadeInUp 1.2s ease-out;
 }
 
-.about, .projects, .contact {
-    padding: 60px 20px;
-    background-color: #f0f0f0;
+.hero-text p {
+    font-size: 1.1rem;
+    animation: fadeInUp 1.4s ease-out;
 }
 
-.about h2, .projects h2, .contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.hero-image img {
+    border-radius: 15px;
+    max-width: 100%;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.project-list {
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 20px 20px;
+}
+
+.about-content,
+.project-list,
+.skills-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
-    color: black;
+    justify-content: center;
 }
 
-.project-card {
-    background-color: white;
+.about-img,
+.project-card img {
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text,
+.project-card,
+.skill-card {
+    flex: 1 1 300px;
+}
+
+.project-card,
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover,
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.contact a {
+    color: #00f2ff;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222;
-    color: white;
-}
-
-.skills {
-    padding: 60px 20px;
-    background-color: #fff;
-}
-
-.skills h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.skill-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-left: 5px solid #007BFF;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.6);
 }
