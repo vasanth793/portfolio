@@ -1,39 +1,118 @@
-body{
+* {
     margin: 0;
-}
-.body{
-    background: linear-gradient(to top, #000000, #726e6b);
-    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
     
 }
-.div1{
-    position: relative;
-    padding-top: 20px;
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.navbar {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
 }
-.imgg{
-    right: 16px;
-    position: absolute;
 
-}
-.dis{
-    padding-left: 100px;
-    padding-top: 50px;
-    color: white;
-    color: white;
-    font-size: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-.cont{
+.nav-links {
+    list-style: none;
     display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
     color: white;
-    padding-top: 200px;
-}
-.img{
-    padding-right: 50px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+.socials a img {
+    width: 30px;
+    margin-left: 10px;
+}
 
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
 
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    color: #444;
+}
+
+.hero-text h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #666;
+}
+
+.about, .projects, .contact {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+}
+
+.about h2, .projects h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.skills {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #007BFF;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
