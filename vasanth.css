@@ -1,4 +1,3 @@
-/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -229,12 +228,12 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    .hero, .about-content, .skills-list, .project-list {
+    .hero, .about-content, .skills-list, .project-list ,header , .navbar {
         flex-direction: column;
         align-items: center;
     }
 
-    .hero-text, .hero-image {
+    .hero-text, .hero-image .navbar {
         text-align: center;
         padding: 0;
     }
